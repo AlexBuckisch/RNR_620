@@ -379,9 +379,19 @@ models3 <- fitList("psi(.)p(.)" = fm1,
 
 # Predicting occupancy and detection probability -------------------------------
 
-# Predicting occupancy and detection probability for the null model
+# Occupancy and detection probability for the null model
 backTransform(fm1, type = "state")
 backTransform(fm1, type = "det")
+                                        
+# Occupancy and detection probability for the top model (fm32)
+
+summary(fm32)
+# Elevation is a significant covariate on occupancy probability (p < 0.05)
+# Date is a highly significant covariate on detection probability (p < 0.01)
+
+plogis(coef(fm32)) # backtransforming model on probability scale
+# psi(Elevation) = 0.31
+# p(Date) = 0.43                                        
 
 # When creating data frame for the predicted values, the name of the column needs
 # to be the same name as the variable used in the modeling
