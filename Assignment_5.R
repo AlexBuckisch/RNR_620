@@ -11,6 +11,12 @@
 # All necessary data have already been formatted and uploaded to GitHub for ease
 # of use, access, and reproducibility.
 
+# In theory (!), you should be able to Ctrl+A and Ctrl+Enter in R and it should run
+# without a hitch. Downloading and extracting data from my GitHub repository and
+# creating plots and maps automatically. library(repmis) is important for the
+# automatic download and extraction from GitHub, check to see if you need to
+# select (Y/n) after loading it.
+
 # Packages ---------------------------------------------------------------------
 
 library(sf)
